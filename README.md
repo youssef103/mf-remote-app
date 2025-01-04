@@ -50,3 +50,7 @@ npm run dev
 ```
 
 This will start the Vite development server, and your application should be available at http://localhost:3000.
+
+## Host app
+
+- **host-app repo** [link](https://github.com/youssef103/mf-host-app.git)
