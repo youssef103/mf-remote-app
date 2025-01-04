@@ -46,7 +46,9 @@ npm install
 ### 3. Start the development server
 
 ```bash
-npm run dev
+# npm run build && npm run preview
+# OR
+npm run serve
 ```
 
 This will start the Vite development server, and your application should be available at http://localhost:3000.
