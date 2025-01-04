@@ -1,50 +1,52 @@
-# React + TypeScript + Vite
+# Mastering Micro-Frontends: Advanced Tutorial with Module Federation and Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to the advanced tutorial on **Mastering Micro-Frontends** using **Module Federation** and **Vite**. In this tutorial, we'll explore how to build scalable and maintainable web applications by integrating micro-frontends with Vite and Module Federation.
 
-Currently, two official plugins are available:
+## 🚀 Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Micro-Frontends**: Learn how to break down a monolithic frontend application into smaller, independently deployable micro-frontends.
+- **Module Federation**: Understand how Webpack's Module Federation feature allows dynamic loading of micro-frontends, enabling them to share code seamlessly.
+- **Vite Integration**: Utilize Vite for its fast development server and optimized build process, ideal for modern web development.
 
-## Expanding the ESLint configuration
+## 📖 Table of Contents
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+1. [Introduction](#introduction)
+2. [Prerequisites](#prerequisites)
+3. [Setup](#setup)
 
-- Configure the top-level `parserOptions` property like this:
+## 📝 Introduction
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+In modern frontend development, building large-scale applications with multiple teams can be challenging. Micro-frontends offer a solution by allowing teams to build, deploy, and maintain individual features independently. This tutorial demonstrates how to implement micro-frontends in a real-world project using **Module Federation** from Webpack and the ultra-fast build tool **Vite**.
+
+## 🚧 Prerequisites
+
+Before you begin, make sure you have the following installed:
+
+- **Node.js** (>= v14.x)
+- **npm** or **yarn**
+- **Vite** (installation instructions [here](https://vitejs.dev/))
+
+You'll also need some familiarity with **JavaScript**, **Webpack**, and **React** (or your framework of choice).
+
+## ⚡ Setup
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/your-username/micro-frontends-vite-module-federation.git
+cd micro-frontends-vite-module-federation
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 3. Start the development server
+
+```bash
+npm run dev
+```
+
+This will start the Vite development server, and your application should be available at http://localhost:3000.
